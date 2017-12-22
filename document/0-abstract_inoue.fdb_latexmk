@@ -1,0 +1,16 @@
+# Fdb version 3
+["dvipdf"] 0 "/home/halu/LaTeX/document/0-abstract_inoue.dvi" "/home/halu/LaTeX/document/0-abstract_inoue.pdf" "/home/halu/LaTeX/document/0-abstract_inoue" 0
+  "/home/halu/LaTeX/document/0-abstract_inoue.dvi" 0 -1 0 "latex"
+  (generated)
+  "/home/halu/LaTeX/document/0-abstract_inoue.pdf"
+["latex"] 1513773935 "0-abstract_inoue.tex" "/home/halu/LaTeX/document/0-abstract_inoue.dvi" "0-abstract_inoue" 1513773935
+  "/etc/texmf/web2c/texmf.cnf" 1510137025 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/halu/LaTeX/document/0-abstract_inoue.aux" 1513756808 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/var/lib/texmf/web2c/eptex/platex.fmt" 1513580689 1062952 6a521a7fd7f2c1844aeef28c3730c789 ""
+  "0-abstract_inoue.tex" 1513773934 1808 787450b3fd613a6c657027973f4301e8 ""
+  (generated)
+  "/home/halu/LaTeX/document/0-abstract_inoue.log"
+  "/home/halu/LaTeX/document/0-abstract_inoue.dvi"
+  "0-abstract_inoue.log"

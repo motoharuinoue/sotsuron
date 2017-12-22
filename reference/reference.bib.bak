@@ -1,0 +1,387 @@
+%%
+%% WinShell 3.3.2.6
+%% http://www.winshell.org/
+%%
+
+% Strings
+
+
+% Preamble
+
+
+% BibTeX Entries
+
+
+
+
+@book{osima,
+author               = {大島希巳江},
+publisher            = {講談社},
+title                = {笑いの技術},
+year                 = {2006},
+}
+
+@book{saito,
+author               ={斎藤孝},
+publisher            ={ダイヤモンド社},
+title                ={雑談力が上がる話し方},
+year             	 ={2010},
+}
+
+
+@book{Nakamura,
+author               = {中村明},
+publisher            = {筑摩書房},
+title                = {笑いの日本語辞典},
+year                 = {2008},
+}
+
+@book{NPO,
+author               = {NPO法人ホールファミリーケア協会},
+publisher            = {三省堂},
+title                = {新傾聴ボランティアのすすめ},
+year                 = {2009},
+}
+
+@book{Ganso,
+author               = {元祖爆笑王},
+publisher            = {RittorMusic},
+title                = {漫才入門 ウケる笑いの作り方、ぜんぶ教えます},
+year                 = {2008},
+}
+
+@book{感情,
+author               = {中村明},
+publisher            = {東京堂出版},
+title                = {感情表現辞典},
+year                 = {1993},
+}
+
+
+@article{森光,
+author="森光, 義昭 and 関, 聡",
+title="情報化社会の現状と課題",
+journal="久留米信愛女学院短期大学研究紀要",
+ISSN="13487310",
+publisher="久留米信愛女学院短期大学",
+year="2004",
+month="Jul",
+volume="27",
+number="",
+pages="45-56",
+URL="http://ci.nii.ac.jp/naid/110004029440/",
+DOI="",
+}
+
+@article{大竹裕也,
+author="大竹, 裕也 and 萩原, 将文",
+title="A Dialogue System for the Elderly Considering Utterance Intention",
+journal="日本感性工学会論文誌",
+ISSN="1884-0833",
+publisher="日本感性工学会",
+year="2012",
+month="",
+volume="11",
+number="2",
+pages="207-214",
+URL="http://ci.nii.ac.jp/naid/130002148575/",
+DOI="10.5057/jjske.11.207",
+}
+
+
+@article{UENO,
+author="UENO, Yukinaga",
+title="Studies of Humor phenomenon and Classification of Humor",
+journal="Japanese Journal of Social Psychology ( Before 1996, Research in Social Psychology )",
+ISSN="09161503",
+publisher="The Japanese Society of Social Psychology",
+year="1992",
+month="Mar",
+volume="7",
+number="2",
+pages="112-120",
+URL="http://ci.nii.ac.jp/naid/110002785539/en/",
+DOI="",
+}
+
+@article{塚脇,
+author="塚脇, 涼太 and ツカワキ, リョウタ and Tsukawaki, Ryota",
+title="ユーモア表出の類型ごとにみた動機の構造",
+journal="広島大学心理学研究",
+ISSN="1347-1619",
+publisher="広島大学大学院教育学研究科心理学講座",
+year="2011",
+month="",
+volume="",
+number="11",
+pages="49-56",
+URL="http://ci.nii.ac.jp/naid/120003932412/",
+DOI="",
+}
+
+@article{牧野,
+author="牧野, 幸志",
+title="説得に及ぼすユーモアの種類と量の効果(3)",
+journal="高松大学紀要",
+ISSN="13427903",
+publisher="高松大学",
+year="2000",
+month="Sep",
+volume="34",
+number="",
+pages="53-68",
+URL="http://ci.nii.ac.jp/naid/110000987039/",
+DOI="",
+}
+
+@article{Kakuframe,
+author="河原 大輔 and 黒橋 禎夫",
+title="格フレーム辞書の漸次的自動構築",
+journal="自然言語処理",
+ISSN="13407619",
+publisher="言語処理学会",
+year="2005",
+volume="12",
+number="2",
+pages="109-131",
+URL="http://ci.nii.ac.jp/naid/10015447374/",
+DOI="",
+}
+
+@article{humor_fuji,
+author="藤倉将平,小川義人,菊池英明",
+title="非タスク指向対話システムにおけるマイクロブログを用いたユーモア発話の自動生成",
+journal="電気情報通信学会",
+ISSN="",
+publisher="",
+year="2013-12",
+volume="113",
+number="338",
+pages="29-32",
+URL="",
+DOI="",
+}
+
+@article{humor_yoshida,
+author="吉田裕介,萩原将文",
+title="複数の言語資源を用いたユーモアを含む対話システム",
+journal="日本知能情報ファジィ学会",
+ISSN="",
+publisher="日本知能情報ファジィ学会誌",
+year="2013-03",
+volume="",
+number="",
+pages="",
+URL="",
+DOI="",
+}
+
+@article{Eliza,
+author               = {J. Weizenbaum},
+journal              = {Communication of the ACM},
+title                = {Eliza - a computer program for the study of natural language communication between man and machine},
+volume               = {9},
+number               = {1},
+pages                = {36-45},
+year                 = {1966},
+}
+
+@article{Tani,
+author="谷, 忠邦 and 大坊, 郁夫 and タニ, タダクニ and ダイボウ, イクオ and Tani, Tadakuni and Daibo, Ikuo",
+title="ユーモアと社会心理学的変数との関連についての基礎的研究",
+journal="対人社会心理学研究",
+ISSN="13462857",
+publisher="大阪大学大学院人間科学研究科対人社会心理学研究室",
+year="2008",
+month="Mar",
+volume="",
+number="8",
+pages="129-137",
+URL="http://ci.nii.ac.jp/naid/120004838284/",
+DOI="",
+}
+
+@article{塚脇,
+author="塚脇, 涼太 and 深田, 博己 and 樋口, 匡貴",
+title="ユーモア表出が表出者自身の不安および抑うつに及ぼす影響過程",
+journal="実験社会心理学研究",
+ISSN="03877973",
+publisher="日本グループ・ダイナミックス学会",
+year="2011",
+month="sep",
+volume="51",
+number="1",
+pages="43-51",
+URL="http://ci.nii.ac.jp/naid/40018975241/",
+DOI="",
+}
+
+
+@article{dpmatching,
+author = {S.,B.,Needleman and C.,D.,Wunsch}, 
+title = {A general method applicable to the search for similarities in the amino acid sequence of two proteins}, 
+journal = {Journal of Molecular Biology},
+volume = {48},
+pages = {443-453},
+year = {1970},
+} 
+
+
+@article{Yamane,
+  title={笑いを生むことわざすかしの自動生成システム},
+  author={山根宏彰 and 萩原将文},
+  journal={知能と情報},
+  volume={24},
+  number={2},
+  pages={671-679},
+  year={2012}
+}
+
+
+@article{takano,
+author="高野憲悟 and 萩原将文",
+title="感情関連語を用いた感情推定法の提案とニュースサイトのアクセス解析への応用",
+journal="日本知能情報ファジィ学会",
+ISSN="1882-0212",
+publisher="日本知能情報ファジィ学会",
+year="2011",
+month="Sep",
+volume="27",
+number="",
+pages="676-681",
+URL="http://ci.nii.ac.jp/naid/40019536666/",
+DOI="",
+}
+
+@article{Grice,
+ author               = {P.Grice},
+ journal              = {Harvard University Press},
+ title                = {Studies in the way of words},
+ year                 = {1989},
+ }
+
+@article{Dybala,
+author="Dybala, Pawel and Ptaszynski, Michal and Maciejewski, Jacek and Takahashi, Mizuki and Rzepka, Rafal and Araki, Kenji",
+title="Multiagent system for joke generation: Humor and emotions combined in human-agent conversation",
+journal="Journal of Ambient Intelligence and Smart Environments",
+ISSN="1876-1364",
+publisher="IOS Press",
+year="2010",
+month="",
+volume="2",
+number="1",
+pages="31-48",
+URL="http://ci.nii.ac.jp/naid/120002834732/",
+DOI="info:doi/10.3233/AIS-2010-0053",
+}
+
+
+@article{横山,
+author="横山, 祥恵 and 山本, 大介 and 小林, 優佳 and 土井, 美和子",
+title="高齢者向け対話インタフェース-雑談継続を目的とした話題提示・傾聴の切替式対話法-",
+journal="情報処理学会研究報告. SLP, 音声言語情報処理",
+ISSN="09196072",
+publisher="一般社団法人情報処理学会",
+year="2010",
+month="Feb",
+volume="2010",
+number="4",
+pages="1-6",
+URL="http://ci.nii.ac.jp/naid/110007990678/",
+DOI="",
+}
+
+@article{Yamada,
+ author               = {山田, 一郎 and 呉鍾勳 and 鳥澤, 健太郎 and 黒田, 航 and 風間, 淳一 and 村田, 真樹},
+ journal              = {言語処理学会第16回年次大会発表論文集},
+ title                = {Wikipedia を利用した日本語 WordNet への用語追加の検討},
+ year                 = {2010},
+ }
+
+
+ 
+@misc{Siri,
+title="Apple:あなたの声を使ってSiriにもっと色々頼みましょう",
+howpublished="\url{http://www.apple.com/jp/ios/siri/}",
+}
+
+@misc{Speech,
+title="しゃべってコンシェル.",
+howpublished="\url{http://www.nttdocomo.co.jp/service/information/shabette_concier/.}",
+}
+
+@misc{Google,
+author="Google日本",
+title="大規模日本語n-gramデータの公開",
+howpublished="\url{http://googlejapan.blogspot.com/2007/11/n-gram.html}",
+}
+
+@misc{timing,
+author="一般社団法人 日本アンガーマネジメント協会",
+title="仕事のコミュニケーションにユーモアを",
+howpublished="\url{http://www.angermanagement.co.jp/blog/2011/11/post-155.html}",
+}
+
+@misc{mecab,
+author="京都大学情報学研究科 日本電信電話株式会社コミュニケーション科学基礎研究所共同研究ユニットプロジェクト",
+title="MeCab: Yet Another Part-of-Speech and Morphological Analyzer",
+howpublished="\url{http://mecab.sourceforge.net/}",
+}
+@misc{cabocha,
+title="CaboCha:南瓜: Yet Another Japanese Dependency Structure Analyzer",
+howpublished="\url{http://chasen.org/~taku/software/cabocha/}",
+}
+
+@misc{KNP,
+title="KNP:日本語構文・格解析システム",
+howpublished="\url{http://nlp.ist.i.kyoto-u.ac.jp/index.php?KNP}",
+}
+
+@misc{Uzura,
+  howpublished         = {\url{http://www.din.or.jp/?ohzaki/uzura.htm}},
+  title                = {人工無能うずら},
+  }
+@misc{Reudy,
+  howpublished         = {\url{http://www.rogiken.org/SSB/reudy.html}},
+  title                = {人工無能ロイディ},
+  }
+
+@misc{日本語評価,
+ howpublished         = "\url{http://cl.naist.jp/~inui/research/EM/sentiment-lexicon.html}",
+ title                = {日本語評価極性辞書},
+ }
+ 
+ 
+@misc{dpcite,
+ author               = {中田亨},
+ howpublished         = {\url{http://staff.aist.go.jp/toru-nakata/dpmatching.html}},
+ title                = {DP マッチング： 動的計画法による文字列類似度計算},
+ }
+
+@misc{Twitter,
+ howpublished         = {\url{http://twitter.com/}},
+ title                = {Twitter},
+ }
+ 
+@misc{Wikipedia,
+title="Wikipedia",
+howpublished="\url{http://ja.wikipedia.org/wiki/メインページ}",
+}
+
+ 
+ @misc{Wordnetweb,
+ author               = {独立行政法人情報通信機構},
+ howpublished         = {\url{http://nlpwww.nict.go.jp/wn-ja/}},
+ title                = {日本語WordNet},
+ }
+ 
+@misc{Goitaikei,
+author="岩波書店",
+title="日本語語彙大系CD-ROM版",
+howpublished="\url{http://www.kecl.ntt.co.jp/mtg/resources/GoiTaikei/}",
+}
+
+@misc{humoreffect,
+author = "宮本康矢",
+title="ユーモアのストレス緩和効果の研究",
+}

@@ -1,0 +1,83 @@
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2017.12.18)  20 DEC 2017 21:45
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**0-abstract_inoue.tex
+(/home/halu/LaTeX/document/0-abstract_inoue.tex
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2016/02/01> patch level 0)
+Babel <3.9n> and hyphenation patterns for 11 languages loaded.
+/home/halu/LaTeX/document/0-abstract_inoue.tex:1: Undefined control sequence.
+l.1 \chapter
+            {あらまし}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/home/halu/LaTeX/document/0-abstract_inoue.tex:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{あ
+               らまし}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[]
+ []
+
+
+Overfull \hbox (9.62216pt too wide) in paragraph at lines 1--2
+\JY1/mc/m/n/10 あ
+ []
+
+
+Overfull \hbox (9.62216pt too wide) in paragraph at lines 1--2
+\JY1/mc/m/n/10 ら
+ []
+
+
+Overfull \hbox (9.62216pt too wide) in paragraph at lines 1--2
+\JY1/mc/m/n/10 ま
+ []
+
+
+Overfull \hbox (9.62216pt too wide) in paragraph at lines 1--2
+\JY1/mc/m/n/10 し 
+ []
+
+
+/home/halu/LaTeX/document/0-abstract_inoue.tex:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 本
+      論文では、ファッション分野における画像と感性語、文章の関連性を分析し、...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+! Emergency stop.
+<*> 0-abstract_inoue.tex
+                        
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 5 strings out of 494865
+ 180 string characters out of 6179768
+ 50380 words of memory out of 5000000
+ 3527 multiletter control sequences out of 15000+600000
+ 7511 words of font info for 31 fonts, out of 8000000 for 9000
+ 264 hyphenation exceptions out of 8191
+ 5i,1n,4p,172b,16s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

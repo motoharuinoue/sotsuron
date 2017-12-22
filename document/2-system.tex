@@ -1,0 +1,426 @@
+\chapter{属性を付与した画像生成システム}
+
+\section{システムの概要}
+
+図\ref{fig:system}にシステム全体の流れを示す. 画像の前処理を行い, 学習に用いる入力データ・出力データ, 足しこむ属性特徴量を作成した後, 提案システムの学習を行う. 学習した提案システムに画像を入力すると, 属性情報が付与された画像を生成する事が出来る. 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.5]{./fig/system.eps}
+		\caption{システムの概要}
+		\label{fig:system}
+	\end{center}
+\end{figure}
+
+\subsection{使用データの前処理について}
+
+\subsubsection{使用データセット}
+提案システムにおいて学習やテストに用いる画像には, Large-scale CelebFaces Attributes (CelebA)データセットを使用した[]. このデータセットは, 著名人の顔画像20万2599枚から成るデータセットで, 40種類の属性ラベルが各画像に付加されている. 画像生成には大量の画像が必要であり, また, 属性情報が付与されているデータセットが必要であるためCelebAデータセットを使用した. 40種類の属性と, 各属性に属する画像数を図\ref{fig:celebAattr}に示す. 
+%http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
+
+\begin{figure}[H]
+ \begin{center}
+  \includegraphics[scale=1]{./fig/celebAattr.eps}
+  \caption{属性一覧}
+  \label{fig:celebAattr}
+ \end{center}
+\end{figure}
+
+
+\subsubsection{画像サイズ}
+使用するCelebAデータセットの画像サイズは178×218pixelである. 画像の特徴量を抽出するVGG-19ネットワークは入力とする画像のサイズが224×224pixelに限定されているため, CelebAデータセットの画像をリサイズする必要があった. 行った処理の流れを図\ref{fig:resize}に示す. 
+
+\begin{figure}[H]
+ \begin{center}
+  \includegraphics[scale=0.5]{./fig/resize.eps}
+  \caption{画像サイズ処理の流れ}
+  \label{fig:resize}
+ \end{center}
+\end{figure}
+
+
+\begin{description}
+\item[1. 正方形に切り取る.]\mbox{}\\ 
+実行結果の例を図\ref{fig:crop}に示す. CelebAデータセット内の画像は顔が画像の中心にあるものが多いため, 上下20pixelを切り取り, 178×178pixelの画像を作成した. 顔の領域を正確に切り取る方法として, 顔検出を行い, その領域を切り取る事も考慮したが, 顔検出を正しく行えなかった場合の対処にかかる手間や, 狭く切り取ってしまう事で属性情報が失われてしまう可能性を考え, 単純に上下20pixelを切り取る方法を選択した. 
+
+\begin{figure}[H]
+ \begin{center}
+  \includegraphics[scale=0.6]{./fig/crop.eps}
+  \caption{切り取り方法の違い}
+  \label{fig:crop}
+ \end{center}
+\end{figure}
+
+\item[2. waifu2xを利用して解像度を失わずに拡大する.]\mbox{}\\ 
+実行結果の例を図\ref{fig:waifu2x}に示す. 178×178pixelの画像をそのまま224×224pixelにリサイズしてしまうと, 解像度が失われてしまうため, 解像度を保ったまま画像を拡大する事が出来るCl-waifu2xというシステム[]を利用した. Cl-waifu2xとは, OpenCLを用いて実装された, 解像度を保ったまま2倍の大きさに画像を拡大する事が出来るシステムである. これにより, 画像サイズは336×336pixelとなる. 
+%https://github.com/marcan/cl-waifu2x
+\begin{figure}[H]
+ \begin{center}
+  \includegraphics[scale=0.5]{./fig/waifu2x.eps}
+  \caption{waifu2xによる拡大}
+  \label{fig:waifu2x}
+ \end{center}
+\end{figure}
+
+
+\item[3. 224×224pixelに縮小する. ]\mbox{}\\  
+実行結果の例を図\ref{fig:small}に示す. 作成した336×336pixelの画像を, VGG-19ネットワークに入力できるように224×224pixelに縮小した. 
+\begin{figure}[H]
+ \begin{center}
+  \includegraphics[scale=0.5]{./fig/small.eps}
+  \caption{縮小}
+  \label{fig:small}
+ \end{center}
+\end{figure}
+\end{description}
+
+\subsection{学習用画像の抽出}
+今回は付与する属性として、笑顔の例で学習用の入出力データの抽出方法について述べる. 提案モデルを学習させるためには, 付与する属性特徴量の他に, 笑顔・笑顔ではない画像の組が一定数必要となる. この笑顔・笑顔ではない画像の組を抽出する方法として4パターンを考えた. 
+
+\begin{description}
+\item[1. CelebAデータセットに付属しているラベル情報を用いる方法]\mbox{}\\ 
+
+図\ref{fig:listattr}に, CelebAデータセットに付属している”list\_attr\_celeba.txt”というテキストファイルの一部を示す. このテキストファイルにラベル情報が記入されており, 各属性にあてはまる場合に”1”, あてはまらない場合に”-1”が記入してある. このテキストファイルを用いて, 笑顔属性が異なり, 他39属性が同じ画像の組を抽出する. 抽出アルゴリズムを図\ref{fig:overlap}に示す. 
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.6]{./fig/listattr.eps}
+ 		\caption{”list\_attr\_celeba.txt”の一部}
+ 		\label{fig:listattr}
+ 	\end{center}
+ \end{figure}
+ \begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/overlap.eps}
+ 		\caption{ラベル情報を用いた抽出方法}
+ 		\label{fig:overlap}
+ 	\end{center}
+ \end{figure}
+ 
+この抽出方法により抽出された画像組を図\ref{fig:imageoverlap}に示す. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.6]{./fig/imageoverlap.eps}
+ 		\caption{抽出した画像例}
+ 		\label{fig:imageoverlap}
+ 	\end{center}
+ \end{figure}
+
+この抽出方法では, ラベルが類似している画像が選択できる一方で, 図\ref{fig:imageoverlap}の2, 3の例をみると分かるように, 1枚の画像に対して複数の画像が対応してしまう場合がある. 
+
+\item[2. 1.で抽出した画像ペアから重複を削除する方法]\mbox{}\\ 
+上で述べたように, 1.の抽出方法では, 1枚の画像に対して複数の画像が対応してしまう場合がある. そのため1.で抽出した画像ペアを学習に用いると, 入力データや出力データに同じ画像が複数枚含まれてしまい,  入出力データに重複する画像が存在すると, 生成する画像が重複する画像に類似してしまうなどの問題点が発生する. そのため, 1.抽出した画像組の中から重複する画像組を削除した. 抽出アルゴリズムを図\ref{fig:removeoverlap}に示す. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/removeoverlap.eps}
+ 		\caption{重複の削除方法}
+ 		\label{fig:removeoverlap}
+ 	\end{center}
+ \end{figure}
+
+\item[3. 画像の類似度を用いる方法]\mbox{}\\ 
+1.の方法で抽出した画像組は, ラベルが類似している画像が選択可能であるが, 顔の向きや背景色などのラベル情報以外の要素が大きく異なる画像が選択されてしまうという欠点がある. そこで, 画像の類似度を考慮した笑顔・笑顔ではない画像組の抽出方法を考えた. 抽出アルゴリズムを図\ref{fig:cossim}に示す. 　まずCelebAデータセットの全ての画像を笑顔の画像群, 笑顔ではない画像群に分割する. 分割した笑顔の画像群1枚に対し, 笑顔ではない画像群の全ての画像との類似度を計算し, 類似度が1番高い画像を選択する. 画像の類似度計算にはコサイン類似度を使用した.　生成したい画像(笑顔画像)を$x^t$, 入力画像(笑顔ではない画像)を$x^s$とする. コサイン類似度による画像の類似度は
+\begin{equation}
+  cos(x^t, x^s) = \frac{x^t \cdot x^s}{|x^t||x^s|}
+\end{equation}
+と計算できる.
+画像を読み込んだRGB値の行列を1次元のベクトルに変換し, このベクトル同士のコサイン類似度を計算した. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/cossim.eps}
+ 		\caption{画像の類似度による抽出方法}
+ 		\label{fig:cossim}
+ 	\end{center}
+ \end{figure}
+
+この抽出方法により抽出された画像組を図\ref{fig:imagecossim}に示す. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.6]{./fig/imagecossim.eps}
+ 		\caption{抽出した画像例}
+ 		\label{fig:imagecossim}
+ 	\end{center}
+ \end{figure}
+
+ただし, この抽出方法では重複する画像が存在する可能性があるという欠点がある. また, 背景や顔の向きなどを考慮した画像ペアを抽出できる一方で, 図\ref{fig:imagecossim}の3のように, 笑顔以外の属性の異なる画像ペアを選択してしまうという欠点が存在する. 
+
+\item[4. 1.で抽出した画像ペアから画像の類似度を利用して重複を削除する方法]\mbox{}\\ 
+以上のパターンを考慮し, 1.で抽出した画像ペアから重複を削除する際に, 単純に削除するのではなく, コサイン類似度の一番高い組を選択する事で重複を削除した. これにより, 笑顔以外の属性が等しい画像ペアが選択でき, また, 背景や顔の向きなどを考慮した画像ペアを選択する事ができる. 抽出アルゴリズムを図\ref{fig:labelcossim}に示す. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/labelcossim.eps}
+ 		\caption{画像の類似度による重複の削除方法}
+ 		\label{fig:labelcossim}
+ 	\end{center}
+\end{figure}
+\end{description}
+
+\section{入出力データの作成}
+
+\subsection{入力データ}
+提案システムでは, 前処理を行った画像から画像特徴量を取得し, これを入力とした. この画像特徴量の抽出にはImageNet Challengeで高精度を残しているCNNの一種である, VGG-19モデルを使用した\cite{vgg}. 図\ref{fig:vgg}にVGG-19モデルの構造を示す. 19層からなるCNNの一種であり, 畳込み処理とプーリング処理を行った後に, 全結合層を結合させたモデルとなっている. 本研究では, 前処理を行った画像をVGG-19モデルに入力し, 図\ref{fig:vgg}のfc7層の4096次元の画像特徴量を取得した. 全ての入力画像において4096次元の特徴量を抽出し, npyファイルに保存した. 提案モデル学習時, テスト時にはこのnpyファイルを入力とした. 笑顔画像を生成する際には, 笑顔ではない画像の特徴量を抽出し, 入力する. ここで, 最後の1000次元の特徴量を用いなかった理由としては, 使用したVGG-19ネットワークはImageNet Challengeという1000クラス分類における精度を競うコンテストのために使用されたネットワークであり, 最後の出力の1000次元ベクトルは, 1000クラスに相当する. 本研究では画像の特徴量を表す値を得たかったため, 最後より1つ前の層の4096次元の値を使用した.  
+%https://arxiv.org/pdf/1409.1556.pdf
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/vgg.eps}
+ 		\caption{VGG-19モデルの構造}
+ 		\label{fig:vgg}
+ 	\end{center}
+\end{figure}
+
+
+\subsection{出力データ}
+提案システムにおける出力は, 生成画像である. 生成する画像のサイズは64×64pixelとした. 提案モデルを学習する際には, 笑顔画像を読み込み, 生成画像が笑顔画像と類似するように学習を行う. 学習に用いる出力データを作成する際は, 笑顔画像をscipyライブラリを用いてRGB値におとしこみ, 全ての画像のRGB値を格納した配列を作成し, npyファイルに保存した. 提案モデル学習時, テスト時にはこのnpyファイルを用いて提案モデルの学習, テストを行った. 
+
+\section{属性特徴量の作成}
+属性特徴量の作成には, 入力データの作成と同じくVGG-19モデルを使用した. その処理の流れを図\ref{fig:attrfeature}に示す. 
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/attrfeature.eps}
+ 		\caption{}
+ 		\label{fig:attrfeature}
+ 	\end{center}
+\end{figure}
+
+学習に用いる笑顔画像群$S^t = \{x^t_{1}, ..., x^t_{n}\}$, 笑顔ではない画像群$S^s = \{x^s_{1}, ..., x^s_{n}\}$をそれぞれVGG-19モデルに入力し, 特徴量を抽出する. 抽出した特徴量を$F^t = \{f^t_{1}, ..., f^t_{n}\}$, $F^s = \{f^s_{1}, ..., f^s_{n}\}$とする. それぞれ抽出した特徴量の差分をとり, 画像ペア数で平均をとる事で, 属性特徴量$A$を作成した. 
+
+\begin{equation}
+  A = \frac{\sum^{n}_{i=1}(f^t_{i} - f^s_{i})}{n}
+\end{equation}
+
+提案モデルへある画像を入力する際に, 属性特徴量を足す. この時に, 属性特徴量に重み$\alpha$をかけ, 最適な属性特徴量の割合を求めた.  
+
+\section{画像生成の処理}
+顔画像生成モデルを図\ref{fig:model}に示す. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/model.eps}
+ 		\caption{顔画像生成モデル}
+ 		\label{fig:model}
+ 	\end{center}
+ \end{figure}
+画像を生成する際の処理の流れを, 図\ref{fig:generator}に示す. ただし, 図中の数字は, 初め2層はチャンネル数, 残りの層は画像の高さ×画像の幅×チャンネル数を表す. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/generator.eps}
+ 		\caption{画像生成の際の処理の流れ}
+ 		\label{fig:generator}
+ 	\end{center}
+ \end{figure}
+ 
+ このように, 画像分類などに用いられるCNNの逆方向の操作を行い, 画像を生成する. はじめは小さな多数の特徴マップに変形し, これを徐々に少数の大きな特徴マップに変形していく事で, 画像を生成する. 
+
+\section{学習に用いるロスの定義}
+提案モデルを学習する際, ロスが小さくなるように学習を行う事で画像が生成可能なモデルを構築する事が出来る. ロス$L$は, 生成画像と正解画像(属性が付与されている学習用画像)のピクセル誤差に制約項を加えたものとした. 
+\begin{equation}
+  L = L_{pixel} + \beta L_{tv}
+\end{equation}
+ただし, 制約項をそのままロスに加えてしまうと, ロスの中の制約項の比率が大きくなりすぎてしまい, スムージング効果が大きすぎる画像が生成されてしまう. そこで, 制約項に重み$\beta$をかけてロスに足した. 
+
+次にピクセル誤差と制約項のそれぞれについて詳しく説明する.
+\subsection{ピクセル誤差}
+生成画像群$S^g = \{x^g_{1}, ..., x^g_{n}\}$と正解画像群$S^a = \{x^a_{1}, ..., x^a_{n}\}$は共に64×64pixelであるため, 生成画像と正解画像を読み込んだ行列は64×64×3(チャンネル)となる. この行列を1次元におとしこめ, 誤差をとる事でピクセル誤差$L_pixel$を計算した. 
+\begin{equation}
+  L_{pixel} = \frac{\sum^{n}_{i=1}(x^g_{i} - x^a_{i})}{n}
+\end{equation}
+\subsection{制約項}
+ピクセル誤差のみをロスと定義すると, 崩れた画像が生成されてしまう可能性があるため, 制約項を導入した. 制約項は隣り合うピクセルとの誤差で表され, Tatal Variation Lossと呼ばれる. その理論を, 図\ref{fig:tvloss}に示す. 
+
+生成画像$x^g$内の1ピクセルの値を$P_{i,j}$とする. ただし, $i, j$は画像内の位置を表すものとする. Total Variation Loss$L_{tv}$の値は, 
+\begin{equation}
+  L_{tv} = \sum_{i,j}((P_{i,j+1} - P_{i,j})^2 + (P_{i+1,j} - P_{i,j})^2)
+\end{equation}
+と表される. 
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.7]{./fig/tvloss.eps}
+ 		\caption{Total Variation Loss}
+ 		\label{fig:tvloss}
+ 	\end{center}
+ \end{figure}
+
+図のように, 64×64×3の行列で表される生成画像から, 下のy成分1pixelを無視したものと, 上のy成分1pixelを無視したものを比較する. このようにする事で計算量を少ないまま, 隣り合うピクセルの誤差を計算する事が出来る. 同様の処理をx軸方向にも行い, 足し合わせる事で制約項とする. この制約項を導入する事でスムージング効果が得られ, 滑らかな画像を生成する事ができる. 
+
+\section{ミニバッチの導入}
+提案モデルを学習するためには, 膨大な計算量が必要となる. そこで, 計算量の削減を行うためにミニバッチを利用した. 学習に用いるデータをミニバッチと呼ばれるいくつかのサイズの集合に分割し, ネットワークのパラメータの更新を毎回ではなく, ミニバッチ毎に行う. このようにする事で, 学習が安定しやすく, 学習にかかる計算量も少なくなる. 
+本研究では, ミニバッチサイズを64に設定した. 
+
+\section{同じ画像を生成する顔画像生成モデル}
+画像生成モデルが正しく設計できているかの確認を行うため, 予備実験として, 入力画像と同じ画像を生成する顔画像生成モデルを構築した. 
+
+学習用画像の枚数や, 学習回数などのパラメータは表\ref{tab:sameparam}に示す. 
+\begin{table}[H]
+  \begin{center}
+    \caption{同じ画像を生成するモデルのパラメータ設定}
+    \begin{tabular}{|c|c|} \hline
+      学習枚数 & 50,000枚  \\ \hline
+      学習回数 & 40エポック  \\ \hline
+      制約項重み$\beta$ & 0.3  \\ \hline
+    \end{tabular}
+    \label{tab:sameparam}
+  \end{center}
+\end{table}
+
+学習時におけるロスの移り変わりを図\ref{fig:sameloss}に示す. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.6]{./fig/sameloss.eps}
+ 		\caption{同じ画像生成モデル学習時のロスの移り変わり}
+ 		\label{fig:sameloss}
+ 	\end{center}
+ \end{figure}
+
+生成された画像を図\ref{fig:sametest}に示す. なお, 生成に用いた画像は全て, 学習データ50,000枚に含まれていない画像である. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/sametest.eps}
+ 		\caption{同じ画像生成モデルによる生成画像}
+ 		\label{fig:sametest}
+ 	\end{center}
+ \end{figure}
+
+また, 入力画像を図\ref{fig:sameanswer}に示す.
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/sameanswer.eps}
+ 		\caption{同じ画像生成モデルへの入力画像}
+ 		\label{fig:sameanswer}
+ 	\end{center}
+ \end{figure}
+
+以上より, 同じ人物のような画像が生成できている事が確認できる. 
+
+\section{生成画像}
+以下に, 入力画像と, 生成された画像を示す. 
+\subsection{笑顔属性を付与した場合}
+\begin{description}
+ \item[1. 抽出方法2で抽出した画像組を用いた場合]\mbox{}\\ 
+抽出方法2の, ラベル情報を元に笑顔・笑顔ではない画像組を抽出し, 重複を単純に削除した画像組を用いて, 学習を行った. 学習枚数や学習回数などのパラメータは表\ref{tab:smile1param}に示す. 
+\begin{table}[H]
+  \begin{center}
+    \caption{抽出方法2による笑顔画像生成モデルのパラメータ設定}
+    \begin{tabular}{|c|c|} \hline
+      学習枚数 & 10,005枚  \\ \hline
+      学習回数 & 300エポック  \\ \hline
+      属性特徴量重み$\alpha$ & 0.5  \\ \hline
+      制約項重み$\beta$ & 0.2  \\ \hline
+    \end{tabular}
+    \label{tab:smile1param}
+  \end{center}
+\end{table}
+
+入力画像を図\ref{fig:smileinput}, 生成された画像を図\ref{fig:smileoutput}に示す. 
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smileinput.eps}
+ 		\caption{笑顔画像生成の入力画像}
+ 		\label{fig:smileinput}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smileoutput.eps}
+ 		\caption{笑顔画像生成の生成画像}
+ 		\label{fig:smileoutput}
+ 	\end{center}
+\end{figure}
+
+ \item[2. 抽出方法3で抽出した画像組を用いた場合]\mbox{}\\ 
+抽出方法3の, ラベル情報を元に笑顔・笑顔ではない画像組を抽出し, コサイン類似度により重複を削除した画像組を用いて, 学習を行った. 学習枚数や学習回数などのパラメータは表\ref{tab:smile2param}に示す. 
+\begin{table}[H]
+  \begin{center}
+    \caption{抽出方法3による笑顔画像生成モデルのパラメータ設定}
+    \begin{tabular}{|c|c|} \hline
+      学習枚数 & 15,000枚  \\ \hline
+      学習回数 & 200エポック  \\ \hline
+      属性特徴量重み$\alpha$ & 0.5  \\ \hline
+      制約項重み$\beta$ & 0.4  \\ \hline
+    \end{tabular}
+    \label{tab:smile2param}
+  \end{center}
+\end{table}
+
+入力画像を図\ref{fig:smile2input}, 生成された画像を図\ref{fig:smile2output}に示す. 
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smile2input.eps}
+ 		\caption{笑顔画像生成の入力画像}
+ 		\label{fig:smile2input}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/smile2output.eps}
+ 		\caption{笑顔画像生成の生成画像}
+ 		\label{fig:smile2output}
+ 	\end{center}
+\end{figure}
+
+ \item[3. 制約項の重みを減衰させた場合]\mbox{}\\
+制約項の重みを, 学習している間すべて同じ値ではなく, 減衰させた. これにより, はじめは大まかな画像を生成し, 徐々に細部まで描画できるのではないかと考えた. 制約項の重みは, 図\ref{fig:tvweight}に示す. 
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[scale=0.6]{./fig/tvweight.eps}
+ 		\caption{減衰させた場合の制約項の重み}
+ 		\label{fig:tvweght}
+ 	\end{center}
+ \end{figure}
+ 
+入力画像を図\ref{fig:lossinput}, 生成された画像を図\ref{fig:lossoutput}に示す. 
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/lossinput.eps}
+ 		\caption{制約項重み減衰時の入力画像}
+ 		\label{fig:lossinput}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/lossoutput.eps}
+ 		\caption{制約項重み減衰時の生成画像}
+ 		\label{fig:lossoutput}
+ 	\end{center}
+\end{figure}
+ 
+\end{description}
+
+\subsection{眼鏡属性を付与した場合}
+
+\begin{description}
+ \item[1. 抽出方法2で抽出した画像組を用いた場合]\mbox{}\\ 
+抽出方法2の, ラベル情報を元に眼鏡・眼鏡ではない画像組を抽出し, 重複を単純に削除した画像組を用いて, 学習を行った. 学習枚数や学習回数などのパラメータは表\ref{tab:glassparam}に示す. 
+\begin{table}[H]
+  \begin{center}
+    \caption{抽出方法2による眼鏡画像生成モデルのパラメータ設定}
+    \begin{tabular}{|c|c|} \hline
+      学習枚数 & 5,000枚  \\ \hline
+      学習回数 & 400エポック  \\ \hline
+      属性特徴量重み$\alpha$ & 0.5  \\ \hline
+      制約項重み$\beta$ & 0.3  \\ \hline
+    \end{tabular}
+    \label{tab:glassparam}
+  \end{center}
+\end{table}
+
+入力画像を図\ref{fig:glassinput}, 生成された画像を図\ref{fig:glassoutput}に示す. 
+
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/glassinput.eps}
+ 		\caption{眼鏡画像生成の入力画像}
+ 		\label{fig:glassinput}
+ 	\end{center}
+\end{figure}
+\begin{figure}[H]
+ 	\begin{center}
+ 		\includegraphics[width=9.0cm]{./fig/glassoutput.eps}
+ 		\caption{眼鏡画像生成の生成画像}
+ 		\label{fig:glassoutput}
+ 	\end{center}
+\end{figure}
+
+\end{description}

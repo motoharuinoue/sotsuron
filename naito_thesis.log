@@ -1,0 +1,777 @@
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2017.12.18)  20 DEC 2017 15:16
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**naito_thesis.tex
+(/home/halu/LaTeX/naito_thesis.tex
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2016/02/01> patch level 0)
+Babel <3.9n> and hyphenation patterns for 11 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/platex/base/jreport.cls
+Document Class: jreport 2006/06/27 v1.6 Standard pLaTeX class
+\c@@paper=\count81
+(/usr/share/texlive/texmf-dist/tex/platex/base/jsize12.clo
+File: jsize12.clo 2006/06/27 v1.6 Standard pLaTeX file (size option)
+)
+\c@part=\count82
+\c@chapter=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 677.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count91
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
+\c@tracingmulticols=\count92
+\mult@box=\box41
+\multicol@leftmargin=\dimen121
+\c@unbalance=\count93
+\c@collectmore=\count94
+\doublecol@number=\count95
+\multicoltolerance=\count96
+\multicolpretolerance=\count97
+\full@width=\dimen122
+\page@free=\dimen123
+\premulticols=\dimen124
+\postmulticols=\dimen125
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box42
+\last@line=\box43
+\maxbalancingoverflow=\dimen126
+\mult@rightbox=\box44
+\mult@grightbox=\box45
+\mult@gfirstbox=\box46
+\mult@firstbox=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\c@columnbadness=\count98
+\c@finalcolumnbadness=\count99
+\last@try=\dimen127
+\multicolovershoot=\dimen128
+\multicolundershoot=\dimen129
+\mult@nat@firstbox=\box65
+\colbreak@box=\box66
+\mc@col@check@num=\count100
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen130
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen131
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count101
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count102
+\leftroot@=\count103
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count104
+\DOTSCASE@=\count105
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box67
+\strutbox@=\box68
+\big@size=\dimen132
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count106
+\c@MaxMatrixCols=\count107
+\dotsspace@=\muskip10
+\c@parentequation=\count108
+\dspbrk@lvl=\count109
+\tag@help=\toks16
+\row@=\count110
+\column@=\count111
+\maxfields@=\count112
+\andhelp@=\toks17
+\eqnshift@=\dimen133
+\alignsep@=\dimen134
+\tagshift@=\dimen135
+\tagwidth@=\dimen136
+\totwidth@=\dimen137
+\lineht@=\dimen138
+\@envbody=\toks18
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texmf/tex/latex/here.sty) (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
+\symboldmincho=\mathgroup10
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 95.
+ (/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def
+File: dvipdfmx.def 2015/11/04 v4.07 LaTeX color/graphics driver for dvipdfmx (TeX Live/ChoF)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:108: Text line contains an invalid character.
+l.108 ^^@
+         ^^@^^D%  \RequirePackage{ltxcmds}[2010/12/07]%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:108: Text line contains an invalid character.
+l.108 ^^@^^@
+            ^^D%  \RequirePackage{ltxcmds}[2010/12/07]%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:108: Text line contains an invalid character.
+l.108 ^^@^^@^^D
+               %  \RequirePackage{ltxcmds}[2010/12/07]%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:109: Text line contains an invalid character.
+l.109 ^^@
+         ^^@^^D%\fi
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:109: Text line contains an invalid character.
+l.109 ^^@^^@
+            ^^D%\fi
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:109: Text line contains an invalid character.
+l.109 ^^@^^@^^D
+               %\fi
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:110: Text line contains an invalid character.
+l.110 ^^@
+         ^^@^^D%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:110: Text line contains an invalid character.
+l.110 ^^@^^@
+            ^^D%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:110: Text line contains an invalid character.
+l.110 ^^@^^@^^D
+               %
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:111: Text line contains an invalid character.
+l.111 ^^@
+         ^^@^^D%\def\GPT@error{\@PackageError{dvipdfmx.def}}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:111: Text line contains an invalid character.
+l.111 ^^@^^@
+            ^^D%\def\GPT@error{\@PackageError{dvipdfmx.def}}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:111: Text line contains an invalid character.
+l.111 ^^@^^@^^D
+               %\def\GPT@error{\@PackageError{dvipdfmx.def}}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:112: Text line contains an invalid character.
+l.112 ^^@
+         ^^@^^D%\def\GPT@warn{\@PackageWarning{dvipdfmx.def}}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:112: Text line contains an invalid character.
+l.112 ^^@^^@
+            ^^D%\def\GPT@warn{\@PackageWarning{dvipdfmx.def}}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:112: Text line contains an invalid character.
+l.112 ^^@^^@^^D
+               %\def\GPT@warn{\@PackageWarning{dvipdfmx.def}}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:113: Text line contains an invalid character.
+l.113 ^^@
+         ^^@^^D%\let\GPT@pagebox@option\ltx@empty
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:113: Text line contains an invalid character.
+l.113 ^^@^^@
+            ^^D%\let\GPT@pagebox@option\ltx@empty
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:113: Text line contains an invalid character.
+l.113 ^^@^^@^^D
+               %\let\GPT@pagebox@option\ltx@empty
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:114: Text line contains an invalid character.
+l.114 ^^@
+         ^^@^^D%\begingroup
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:114: Text line contains an invalid character.
+l.114 ^^@^^@
+            ^^D%\begingroup
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:114: Text line contains an invalid character.
+l.114 ^^@^^@^^D
+               %\begingroup
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:115: Text line contains an invalid character.
+l.115 ^^@
+         ^^@^^D%\toks@{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:115: Text line contains an invalid character.
+l.115 ^^@^^@
+            ^^D%\toks@{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:115: Text line contains an invalid character.
+l.115 ^^@^^@^^D
+               %\toks@{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:116: Text line contains an invalid character.
+l.116 ^^@
+         ^^@^^D%\define@key{Gin}{page}{\def\Gin@page{#1}}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:116: Text line contains an invalid character.
+l.116 ^^@^^@
+            ^^D%\define@key{Gin}{page}{\def\Gin@page{#1}}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:116: Text line contains an invalid character.
+l.116 ^^@^^@^^D
+               %\define@key{Gin}{page}{\def\Gin@page{#1}}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:117: Text line contains an invalid character.
+l.117 ^^@
+         ^^@^^D%\define@key{Gin}{mask}{\def\Gin@mask{#1}}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:117: Text line contains an invalid character.
+l.117 ^^@^^@
+            ^^D%\define@key{Gin}{mask}{\def\Gin@mask{#1}}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:117: Text line contains an invalid character.
+l.117 ^^@^^@^^D
+               %\define@key{Gin}{mask}{\def\Gin@mask{#1}}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:118: Text line contains an invalid character.
+l.118 ^^@
+         ^^@^^D%\define@key{Gin}{interpolate}[true]{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:118: Text line contains an invalid character.
+l.118 ^^@^^@
+            ^^D%\define@key{Gin}{interpolate}[true]{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:118: Text line contains an invalid character.
+l.118 ^^@^^@^^D
+               %\define@key{Gin}{interpolate}[true]{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:119: Text line contains an invalid character.
+l.119 ^^@
+         ^^@^^D%  \lowercase{\Gin@boolkey{#1}}{interpolate}}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:119: Text line contains an invalid character.
+l.119 ^^@^^@
+            ^^D%  \lowercase{\Gin@boolkey{#1}}{interpolate}}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:119: Text line contains an invalid character.
+l.119 ^^@^^@^^D
+               %  \lowercase{\Gin@boolkey{#1}}{interpolate}}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:120: Text line contains an invalid character.
+l.120 ^^@
+         ^^@^^D%\define@key{Gin}{pagebox}{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:120: Text line contains an invalid character.
+l.120 ^^@^^@
+            ^^D%\define@key{Gin}{pagebox}{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:120: Text line contains an invalid character.
+l.120 ^^@^^@^^D
+               %\define@key{Gin}{pagebox}{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:121: Text line contains an invalid character.
+l.121 ^^@
+         ^^@^^D%  \expandafter\let\expandafter\GPT@pagebox%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:121: Text line contains an invalid character.
+l.121 ^^@^^@
+            ^^D%  \expandafter\let\expandafter\GPT@pagebox%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:121: Text line contains an invalid character.
+l.121 ^^@^^@^^D
+               %  \expandafter\let\expandafter\GPT@pagebox%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:122: Text line contains an invalid character.
+l.122 ^^@
+         ^^@^^D%      \csname GPT@pagebox@#1\endcsname
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:122: Text line contains an invalid character.
+l.122 ^^@^^@
+            ^^D%      \csname GPT@pagebox@#1\endcsname
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:122: Text line contains an invalid character.
+l.122 ^^@^^@^^D
+               %      \csname GPT@pagebox@#1\endcsname
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:123: Text line contains an invalid character.
+l.123 ^^@
+         ^^@^^D%  \ifx\GPT@pagebox\relax
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:123: Text line contains an invalid character.
+l.123 ^^@^^@
+            ^^D%  \ifx\GPT@pagebox\relax
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:123: Text line contains an invalid character.
+l.123 ^^@^^@^^D
+               %  \ifx\GPT@pagebox\relax
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:124: Text line contains an invalid character.
+l.124 ^^@
+         ^^@^^D%    \let\GPT@pagebox\ltx@empty
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:124: Text line contains an invalid character.
+l.124 ^^@^^@
+            ^^D%    \let\GPT@pagebox\ltx@empty
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:124: Text line contains an invalid character.
+l.124 ^^@^^@^^D
+               %    \let\GPT@pagebox\ltx@empty
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:125: Text line contains an invalid character.
+l.125 ^^@
+         ^^@^^D%    \GPT@warn{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:125: Text line contains an invalid character.
+l.125 ^^@^^@
+            ^^D%    \GPT@warn{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:125: Text line contains an invalid character.
+l.125 ^^@^^@^^D
+               %    \GPT@warn{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:126: Text line contains an invalid character.
+l.126 ^^@
+         ^^@^^D%      Unknown value `#1' for `pagebox'.\MessageBreak
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:126: Text line contains an invalid character.
+l.126 ^^@^^@
+            ^^D%      Unknown value `#1' for `pagebox'.\MessageBreak
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:126: Text line contains an invalid character.
+l.126 ^^@^^@^^D
+               %      Unknown value `#1' for `pagebox'.\MessageBreak
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:127: Text line contains an invalid character.
+l.127 ^^@
+         ^^@^^D%      Supported values:\MessageBreak
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:127: Text line contains an invalid character.
+l.127 ^^@^^@
+            ^^D%      Supported values:\MessageBreak
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:127: Text line contains an invalid character.
+l.127 ^^@^^@^^D
+               %      Supported values:\MessageBreak
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:128: Text line contains an invalid character.
+l.128 ^^@
+         ^^@^^D%      mediabox, cropbox, bleedbox, trimbox, artbox%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:128: Text line contains an invalid character.
+l.128 ^^@^^@
+            ^^D%      mediabox, cropbox, bleedbox, trimbox, artbox%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:128: Text line contains an invalid character.
+l.128 ^^@^^@^^D
+               %      mediabox, cropbox, bleedbox, trimbox, artbox%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:129: Text line contains an invalid character.
+l.129 ^^@
+         ^^@^^D%    }%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:129: Text line contains an invalid character.
+l.129 ^^@^^@
+            ^^D%    }%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:129: Text line contains an invalid character.
+l.129 ^^@^^@^^D
+               %    }%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:130: Text line contains an invalid character.
+l.130 ^^@
+         ^^@^^D%  \else%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:130: Text line contains an invalid character.
+l.130 ^^@^^@
+            ^^D%  \else%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:130: Text line contains an invalid character.
+l.130 ^^@^^@^^D
+               %  \else%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:131: Text line contains an invalid character.
+l.131 ^^@
+         ^^@^^D%    \def\GPT@pagebox@option{-B \GPT@pagebox\space}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:131: Text line contains an invalid character.
+l.131 ^^@^^@
+            ^^D%    \def\GPT@pagebox@option{-B \GPT@pagebox\space}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:131: Text line contains an invalid character.
+l.131 ^^@^^@^^D
+               %    \def\GPT@pagebox@option{-B \GPT@pagebox\space}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:132: Text line contains an invalid character.
+l.132 ^^@
+         ^^@^^D%  \fi%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:132: Text line contains an invalid character.
+l.132 ^^@^^@
+            ^^D%  \fi%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:132: Text line contains an invalid character.
+l.132 ^^@^^@^^D
+               %  \fi%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:133: Text line contains an invalid character.
+l.133 ^^@
+         ^^@^^D%}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:133: Text line contains an invalid character.
+l.133 ^^@^^@
+            ^^D%}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:133: Text line contains an invalid character.
+l.133 ^^@^^@^^D
+               %}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:134: Text line contains an invalid character.
+l.134 ^^@
+         ^^@^^D%}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:134: Text line contains an invalid character.
+l.134 ^^@^^@
+            ^^D%}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:134: Text line contains an invalid character.
+l.134 ^^@^^@^^D
+               %}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:135: Text line contains an invalid character.
+l.135 ^^@
+         ^^@^^D%\ltx@IfUndefined{define@key}{
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:135: Text line contains an invalid character.
+l.135 ^^@^^@
+            ^^D%\ltx@IfUndefined{define@key}{
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:135: Text line contains an invalid character.
+l.135 ^^@^^@^^D
+               %\ltx@IfUndefined{define@key}{
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:136: Text line contains an invalid character.
+l.136 ^^@
+         ^^@^^D%    \edef\x{\endgroup
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:136: Text line contains an invalid character.
+l.136 ^^@^^@
+            ^^D%    \edef\x{\endgroup
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:136: Text line contains an invalid character.
+l.136 ^^@^^@^^D
+               %    \edef\x{\endgroup
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:137: Text line contains an invalid character.
+l.137 ^^@
+         ^^@^^D%      \noexpand\AtBeginDocument{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:137: Text line contains an invalid character.
+l.137 ^^@^^@
+            ^^D%      \noexpand\AtBeginDocument{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:137: Text line contains an invalid character.
+l.137 ^^@^^@^^D
+               %      \noexpand\AtBeginDocument{%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:138: Text line contains an invalid character.
+l.138 ^^@
+         ^^@^^D%        \noexpand\ltx@IfUndefined{define@key}{}{\the\toks@}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:138: Text line contains an invalid character.
+l.138 ^^@^^@
+            ^^D%        \noexpand\ltx@IfUndefined{define@key}{}{\the\toks@}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:138: Text line contains an invalid character.
+l.138 ^^@^^@^^D
+               %        \noexpand\ltx@IfUndefined{define@key}{}{\the\toks@}%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:139: Text line contains an invalid character.
+l.139 ^^@
+         ^^@^^D%      }%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:139: Text line contains an invalid character.
+l.139 ^^@^^@
+            ^^D%      }%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:139: Text line contains an invalid character.
+l.139 ^^@^^@^^D
+               %      }%
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:140: Text line contains an invalid character.
+l.140 ^^@
+         ^^@^^D%    }\x
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:140: Text line contains an invalid character.
+l.140 ^^@^^@
+            ^^D%    }\x
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:140: Text line contains an invalid character.
+l.140 ^^@^^@^^D
+               %    }\x
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+/usr/share/texlive/texmf-dist/tex/latex/dvipdfmx-def/dvipdfmx.def:141: Text line contains an invalid character.
+l.141 ^^@
+         ^^@^^D%  }{%
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 1508 strings out of 494865
+ 17738 string characters out of 6179768
+ 74554 words of memory out of 5000000
+ 4962 multiletter control sequences out of 15000+600000
+ 8167 words of font info for 33 fonts, out of 8000000 for 9000
+ 264 hyphenation exceptions out of 8191
+ 27i,0n,26p,245b,36s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+No pages of output.

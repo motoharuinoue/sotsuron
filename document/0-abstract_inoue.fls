@@ -1,0 +1,8 @@
+PWD /home/halu/LaTeX/document
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/eptex/platex.fmt
+INPUT /home/halu/LaTeX/document/0-abstract_inoue.tex
+OUTPUT /home/halu/LaTeX/document/0-abstract_inoue.log

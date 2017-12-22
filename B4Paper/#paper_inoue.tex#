@@ -1,0 +1,93 @@
+\documentclass[final,a4j,12pt]{jreport}
+\newfont {\boldmathl}{cmmib10 scaled\magstep1}
+\newcommand{\bm}[1]{\mbox{\boldmathl #1}}
+\newcommand{\lw}[1]{\smash{\lower2.0ex\hbox{#1}}}
+
+% パッケージ
+
+\usepackage{multicol}
+\usepackage{amsmath,amssymb}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{textcomp}
+\usepackage{plext}
+\usepackage{enumerate}
+\usepackage{../stylefile/jverb}
+\usepackage{../stylefile/here}
+\usepackage{../stylefile/bpaper}
+\usepackage{../stylefile/epsbox}
+\usepackage{../stylefile/fancyheadings}
+\usepackage{../stylefile/slashbox}
+\usepackage{../stylefile/subfigure}
+\bibliographystyle{../stylefile/jcustom} 
+
+% 定義
+\def\frac#1#2{\genfrac{}{}{}{}{\;#1\;}{\;#2\;}}
+\def\dfrac#1#2{\genfrac{}{}{}{0}{\;#1\;}{\;#2\;}}
+\def\tfrac#1#2{\genfrac{}{}{}{1}{\;#1\;}{\;#2\;}}
+\def\sfrac#1#2{\genfrac{}{}{}{2}{\;#1\;}{\;#2\;}}
+\def\ssfrac#1#2{\genfrac{}{}{}{3}{\;#1\;}{\;#2\;}}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X} %中央揃え
+\newcolumntype{Z}{>{\raggedleft\arraybackslash}X} %右揃え
+
+\usepackage{url}
+\renewcommand{\url}{\begingroup \def\UrlLeft{}\def\UrlRight{}\urlstyle{rm}\Url}
+
+\def\so{.\raisebox{1ex}{.}.\quad}
+\def\because{\raisebox{1ex}{.}.\raisebox{1ex}{.}\quad}
+\def\Omicron{O}
+\def\omicron{o}
+\newcommand{\pdif}[2]{\frac{\partial #1}{\partial #2}}
+
+\setcounter{secnumdepth}{6}
+\makeatletter
+\newcommand{\subsubsubsection}{\@startsection{paragraph}{4}{\z@}%
+  {1.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+  {.5\Cvs \@plus.3\Cdp}%
+  {\reset@font\normalsize\sffamily}
+} 
+
+\def\bs#1{\boldsymbol{#1}}
+\def\quot#1{``#1''}
+\def\ggn{Google {\it N}-gram}
+
+% 何故かずれるのでその場凌ぎ
+\addtolength{\topmargin}{-6mm}
+\addtolength{\oddsidemargin}{-6mm}
+
+
+\begin{document}
+\begin{titlepage}
+\thesis
+{\\考慮した非タスク型会話システム}
+{English \\ Title }
+{萩原 将文 教授}
+{？？？？ 教授}
+{25}%年度
+{学籍番号 61019016}
+{松井 辰哉}
+\end{titlepage}
+\pagenumbering{roman}  % 目次のページ番号をローマ数字にする
+
+\contents  % 目次
+
+\pagenumbering{arabic}  % 本文のページ番号をアラビア数字にする
+
+
+%%%%%ここに各題目のドキュメントを貼る
+%\input{./document/0-abstract}
+%\input{./document/1-introduction}
+%\input{./document/2-system}
+%\input{./document/3-experiment}
+%\input{./document/4-conclusion}
+%\input{./document/5-acknowledgement}
+
+%\bibliography{./reference/reference}
+
+\appendix
+
+%\input{./document/appendixa}
+%\input{./document/appendix}
+
+\end{document}
