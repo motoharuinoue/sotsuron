@@ -15,15 +15,18 @@
 \usepackage{epsfig}
 \usepackage{comment}
 \usepackage{longtable}
-\usepackage{./stylefile/cite}
-\usepackage{./stylefile/jverb}
-\usepackage{./stylefile/here}
+\usepackage{./stylefile/jtygm}
+% \usepackage{./stylefile/cite}
+% \usepackage{./stylefile/jverb}
+% \usepackage{./stylefile/here}
 \usepackage{./stylefile/bpaper}
-\usepackage{./stylefile/epsbox}
+% \usepackage{./stylefile/epsbox}
 \usepackage{./stylefile/fancyheadings}
-\usepackage{./stylefile/slashbox}
-\usepackage{./stylefile/subfigure}
-\bibliographystyle{./stylefile/jecon}
+% \usepackage{./stylefile/slashbox}
+% \usepackage{./stylefile/subfigure}
+\usepackage[backend=bibtex, style=numeric]{biblatex}
+\DeclarePrefChars{'-}
+\addbibresource{./reference/reference.bib}
 
 \def\frac#1#2{\genfrac{}{}{}{}{\;#1\;}{\;#2\;}}
 \def\dfrac#1#2{\genfrac{}{}{}{0}{\;#1\;}{\;#2\;}}
@@ -66,7 +69,7 @@
 \begin{titlepage}
 \thesis
 {時間軸セグメントを導入した \\ 階層的時間記憶モデル}
-{Hierarchical Temporal Memory with \\ time axis segment introduced}
+{Hierarchical Temporal Memory With \\ Time Axis Segment Introduced}
 {萩原 将文 教授}
 {西 宏章 教授}
 {29}
@@ -79,22 +82,20 @@
 
 \pagenumbering{arabic}
 
+\input{./document/0-abstract}
+\input{./document/1-introduction}
+\input{./document/2-htm}
+\input{./document/3-system}
+\input{./document/4-experiment}
+\input{./document/5-conclusion}
+\input{./document/6-acknowledgement}
 
-% \input{./document/0-abstract}
-% \input{./document/1-introduction}
-% \input{./document/2-preprocess}
-% \input{./document/3-system}
-% \input{./document/4-experiment}
-% \input{./document/5-conclusion}
-% \input{./document/6-acknowledgement}
+\addcontentsline{toc}{chapter}{参考文献}
+\printbibliography[title=参考文献]
 
-% \bibliographystyle{jplain}
-% \bibliographystyle{jecon.bst}
-% \bibliography{./reference/reference}
+\appendix
 
-% \appendix
-
-% \input{./document/appendixa}
+\input{./document/appendixa}
 % \input{./document/appendixb}
 % \input{./document/appendixc}
 \end{document}

@@ -1,8 +1,11 @@
-$latex = 'platex -synctex=1 -interaction=nonstopmode %O %S';
-$bibtex = 'pbibtex %O %B';
+#!/usr/bin/perl
+$latex = 'platex -guess-input-enc -src-specials -interaction=nonstopmode -synctex=1';
+$latex_silent = 'platex -interaction=batchmode';
+$dvips = 'dvips';
+$bibtex = 'pbibtex';
+$makeindex = 'mendex -r -c -s jind.ist';
+$dvi_previewer = 'start dviout';
 $dvipdf = 'dvipdfmx %O -o %D %S';
-$max_repeat = 3;
+$preview_continuous_mode = 1;
 $pdf_mode = 3;
-$pvc_view_file_via_temporary = 0;
-
-$pdf_previewer    = "open -a /Applications/Atom.app";
+$pdf_update_method = 4;

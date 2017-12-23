@@ -1,0 +1,20 @@
+\chapter{提案システム}
+\begin{enumerate}
+  \item 感性語の抽出
+  アイテムに付与されているキャプションから抽出。
+  MeCab~\cite{mecab}により形態素解析。
+  MeCab辞書には固有名詞に強いneologdを用いた。
+  \\
+  抽出単語は
+  \begin{itemize}
+    \item 形容詞(自立)＋名詞(形容動詞語幹)
+  \end{itemize}
+  全てを終止形にした後に読みに変換。重複を削除。
+
+  \item 感性語のクラスタリング
+  抽出した感性語の次元数を削減するため、クラスタリングを行った。
+  日本語wikipediaで事前学習を行ったword2vecを用意し、感性語の分散表現を取得。
+  次元数は200にした。
+
+\end{enumerate}
+　

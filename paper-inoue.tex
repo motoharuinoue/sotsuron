@@ -23,7 +23,10 @@
 \usepackage{./stylefile/fancyheadings}
 \usepackage{./stylefile/slashbox}
 \usepackage{./stylefile/subfigure}
-\bibliographystyle{./stylefile/jecon}
+% \bibliographystyle{./stylefile/jecon}
+\usepackage[backend=bibtex, style=numeric]{biblatex}
+\DeclarePrefChars{'-}
+\addbibresource{./reference/reference_inoue.bib}
 
 \def\frac#1#2{\genfrac{}{}{}{}{\;#1\;}{\;#2\;}}
 \def\dfrac#1#2{\genfrac{}{}{}{0}{\;#1\;}{\;#2\;}}
@@ -82,7 +85,7 @@
 
 \input{./document/0-abstract_inoue}
 \input{./document/1-introduction_inoue}
-% \input{./document/2-preprocess}
+\input{./document/2-system_inoue}
 % \input{./document/3-system}
 % \input{./document/4-experiment}
 % \input{./document/5-conclusion}
@@ -90,7 +93,9 @@
 
 % \bibliographystyle{jplain}
 % \bibliographystyle{jecon.bst}
-% \bibliography{./reference/reference}
+
+\addcontentsline{toc}{chapter}{参考文献}
+\printbibliography[title=参考文献]
 
 % \appendix
 
